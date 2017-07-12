@@ -1,0 +1,307 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0045)http://help.dedecms.com/tagdoc/v57/main.htm#0 -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+
+<title>标签手册内容0.0.1</title>
+<meta name="keywords" content="dedecms,标签，手册，内容管理系统，织梦，上海卓卓，V57，标签使用手册">
+<meta name="description" content="dedecmsV57新版标签使用说明--dedecms站长建站首选利器，dedecmsV57盛大发布闪亮登场为站长助力，给力2011，给力dedecmsV57,神马都是浮云，dedecmsV57绝对是传奇">
+<link href="./base.css" rel="stylesheet" type="text/css">
+<style>html, * {-webkit-user-select:text!important; -moz-user-select:text!important;}</style></head>
+<body><li><a name="0"></a></li><li><div id="arclist" class="tag"><h1>adminname</h1><p class="verinfo">仅内容模板</p><p class="verinfo">V55,V56,V57</p><p class="description">获得责任编辑名称</p><div class="examples"><h2>基本语法</h2><p><br>
+{dede:adminname /}	<br>
+</p></div><div class="attrib"><h2>标签属性</h2><ul><li>
+</li></ul></div></div></li><li><a name="1"></a></li><li><div id="arclist" class="tag"><h1>arclist</h1><p class="verinfo">全局标记</p><p class="verinfo">V55,V56,V57</p><p class="description">获取指定文档列表</p><div class="examples"><h2>基本语法</h2><p><br>
+{dede:arclist  flag='h' typeid='' row='' col='' titlelen='' infolen='' imgwidth='' imgheight='' listtype='' orderby='' keyword='' limit='0,1'}<br>
+&lt;a href='[field:arcurl/]'&gt;[field:title/]&lt;/a&gt;<br>
+{/dede:arclist}<br>
+</p></div><div class="attrib"><h2>标签属性</h2><ul><li>
+</li><li> <iterm>col:分多少列显示（默认为单列），5.3版中本属性可以通过多种方式进行多行显示</iterm>
+</li><li> <iterm>row:返回文档列表总数</iterm> 
+</li><li> <iterm>typeid:栏目ID,在列表模板和档案模板中一般不需要指定，在首页模板中允许用","分开表示多个栏目</iterm>
+</li><li> <iterm>getall:在没有指定这属性的情况下,在栏目页、文章页模板,不会获取以","分开的多个栏目的下级子类</iterm>
+</li><li> <iterm>titlelen:标题长度 等同于titlelength</iterm>
+</li><li> <iterm>infolen:表示内容简介长度 等同于infolength</iterm>
+</li><li> <iterm>imgwidth:缩略图宽度</iterm>
+</li><li> <iterm>imgheight:缩略图高度</iterm>
+</li><li> <iterm>listtype: 栏目类型 image含有缩略图 commend推荐</iterm>
+</li><li> <iterm>orderby:文档排序方式</iterm>
+</li><li> <iterm>keyword:含有指定关键字的文档列表，多个关键字用","分</iterm>
+</li><li> <iterm>innertext:单条记录样式</iterm>
+</li><li> <iterm>aid:指定文档ID</iterm>
+</li><li> <iterm>idlist:提取特定文档（文档ID</iterm>
+</li><li> <iterm>channelid:频道ID</iterm>
+</li><li> <iterm>limit:（起始ID从0开始）表示限定的记录范围（如：limit='1,2'  表示从ID为1的记录开始，取2条记录</iterm>
+</li><li> <iterm>flag:自定义属性值：头条[h]推荐[c]图片[p]幻灯[f]滚动[s]跳转[j]图文[a]加粗[b]</iterm>
+</li><li> <iterm>noflag:同flag，但这里是表示不包含这些属性</iterm>
+</li><li> <iterm>orderway:值为 desc 或 asc ，指定排序方式是降序还是顺向排序，默认为降序</iterm>
+</li><li> <iterm>subday:表示在多少天以内的文档</iterm>
+</li></ul></div></div></li><li><a name="2"></a></li><li><div id="arclist" class="tag"><h1>arclistsg</h1><p class="verinfo">全局标记</p><p class="verinfo">V55,V56,V57</p><p class="description">单表独立模型的文档列表调用标记</p><div class="examples"><h2>基本语法</h2><p><br>
+{dede:arclistsg  flag='h' typeid='' row='' col='' titlelen='' orderway='' keyword='' limit='0,1'} <br>
+&lt;a href='[field:arcurl/]'&gt;[field:title/]&lt;/a&gt; <br>
+{/dede:arclistsg}<br>
+</p></div><div class="attrib"><h2>标签属性</h2><ul><li>
+</li><li> <iterm>row:返回文档列表总数</iterm> 
+</li><li> <iterm>typeid:栏目ID,在列表模板和档案模板中一般不需要指定，在封面模板中允许用","分开表示多个栏目</iterm>
+</li><li> <iterm>titlelen:标题长度 等同于titlelength</iterm>
+</li><li> <iterm>orderwey:排序方向</iterm>
+</li><li> <iterm>keyword:含有指定关键字的文档列表，多个关键字用","分</iterm>
+</li><li> <iterm>innertext:单条记录样式(innertext是放在标签之间的代码)</iterm>
+</li><li> <iterm>arcid:指定文档ID</iterm>
+</li><li> <iterm>idlist:提取特定文档（文档ID）</iterm>
+</li><li> <iterm>channelid: 频道ID</iterm>
+</li><li> <iterm>limit:表示限定的记录范围</iterm>
+</li><li> <iterm>flag:自定义属性值：头条[h]推荐[c]图片[p]幻灯[f]滚动[s]跳转[j]图文[a]加粗[b]</iterm>
+</li><li> <iterm>subday:表示在多少天以内的文档</iterm>
+</li></ul></div></div></li><li><a name="3"></a></li><li><div id="arclist" class="tag"><h1>arcpagelist</h1><p class="verinfo"></p><p class="verinfo"></p><p class="description"></p><div class="examples"><h2>基本语法</h2><p></p></div><div class="attrib"><h2>标签属性</h2><ul><li></li></ul></div></div></li><li><a name="4"></a></li><li><div id="arclist" class="tag"><h1>ask</h1><p class="verinfo">全局标记</p><p class="verinfo">V55,V56,V57</p><p class="description">问答调用标签</p><div class="examples"><h2>基本语法</h2><p><br>
+{dede:ask row='6' qtype='new' tid='0' titlelen='24'}<br>
+&lt;dd&gt;<br>
+    &lt;span class="tclass"&gt;[&lt;a href='[field:typeurl/]'&gt;[field:tidname/]&lt;/a&gt;]&lt;/span&gt;<br>
+    &lt;span class="tlink"&gt;&lt;a href="[field:url/]"&gt;[field:title/]&lt;/a&gt;&lt;/span&gt;<br>
+&lt;/dd&gt;<br>
+{/dede:ask}<br>
+</p></div><div class="attrib"><h2>标签属性</h2><ul><li>
+</li><li> <iterm>row:调用条数</iterm> 
+</li><li> <iterm>qtype:排序类型 commend 推荐、ok 表示已解决问题、high 高分问题 、new 最新问题</iterm>
+</li><li> <iterm>tid:栏目id，默认是全部</iterm>
+</li><li> <iterm>titlelen:标题长度</iterm>
+</li></ul></div></div></li><li><a name="5"></a></li><li><div id="arclist" class="tag"><h1>autochannel</h1><p class="verinfo">全局标记</p><p class="verinfo">V55,V56,V57</p><p class="description">指定排序位置的单个栏目的链接</p><div class="examples"><h2>基本语法</h2><p><br>
+{dede:autochannel partsort='' typeid=’’}{/dede:autochannel}<br>
+</p></div><div class="attrib"><h2>标签属性</h2><ul><li>
+</li><li> <iterm>partsort:栏目所在的排序位置</iterm> 
+</li><li> <iterm>typeid:获取单个栏目的顶级栏目</iterm>
+</li></ul></div></div></li><li><a name="6"></a></li><li><div id="arclist" class="tag"><h1>bookcontentlist</h1><p class="verinfo">全局标记</p><p class="verinfo">V55,V56,V57</p><p class="description">连载图书最新内容调用</p><div class="examples"><h2>基本语法</h2><p><br>
+{dede:bookcontentlist row='12' booktype='-1' orderby='lastpost' author='' keyword=''}<br>
+&lt;table width="100%" border="0" cellspacing="2" cellpadding="2"&gt;<br>
+&lt;tr&gt;<br>
+&lt;td width='40%'&gt;<br>
+[[field:cataloglink/]] [field:booklink/]&lt;/td&gt;<br>
+&lt;td width='40%'&gt;[field:contentlink/]&lt;/td&gt;<br>
+&lt;td width='20%'&gt;[field:lastpost function="GetDateMk(@me)"/]&lt;/td&gt;<br>
+&lt;/tr&gt;<br>
+&lt;/table&gt;<br>
+{/dede:bookcontentlist} <br>
+</p></div><div class="attrib"><h2>标签属性</h2><ul><li>
+</li><li> <iterm>row:调用记录条数</iterm> 
+</li><li> <iterm>booktype:图书类型，0 图书、1 漫画，默认全部</iterm>
+</li><li> <iterm>orderby:排序类型，当按排序类型为 commend 表示推荐图书</iterm>
+</li><li> <iterm>author:作者</iterm>
+</li><li> <iterm>keyword:关键字</iterm>
+</li></ul></div></div></li><li><a name="7"></a></li><li><div id="arclist" class="tag"><h1>booklist</h1><p class="verinfo">全局标记</p><p class="verinfo">V55,V56,V57</p><p class="description">连载图书调用</p><div class="examples"><h2>基本语法</h2><p><br>
+{dede:booklist row='12' booktype='-1' orderby='lastpost' author='' keyword=''}<br>
+&lt;a href='[field:bookurl /]'&gt;[field:bookname /]&lt;/a&gt;&lt;br /&gt;<br>
+{/dede:booklist}<br>
+</p></div><div class="attrib"><h2>标签属性</h2><ul><li>
+</li><li> <iterm>row:调用记录条数</iterm> 
+</li><li> <iterm>booktype:图书类型，0 图书、1 漫画，默认全部</iterm>
+</li><li> <iterm>orderby:排序类型，当按排序类型为 commend 表示推荐图书</iterm>
+</li><li> <iterm>author:作者</iterm>
+</li><li> <iterm>keyword:关键字</iterm>
+</li></ul></div></div></li><li><a name="8"></a></li><li><div id="arclist" class="tag"><h1>cattree</h1><p class="verinfo">全局标记</p><p class="verinfo">V55,V56,V57</p><p class="description">调用树形类目</p><div class="examples"><h2>基本语法</h2><p><br>
+{dede:cattree typeid='' catid='' showall=''/}<br>
+</p></div><div class="attrib"><h2>标签属性</h2><ul><li>
+</li><li> <iterm>typeid:顶级树id</iterm> 
+</li><li> <iterm>catid:上级栏目id</iterm>
+</li><li> <iterm>showall:在空或不存在时，强制用产品模型id；如果是 yes 刚显示整个语言区栏目树；为其它数字则是这个数字的模型的id</iterm>
+</li></ul></div></div></li><li><a name="9"></a></li><li><div id="arclist" class="tag"><h1>channel</h1><p class="verinfo">全局标记</p><p class="verinfo">V55,V56,V57</p><p class="description">用于获取栏目列表</p><div class="examples"><h2>基本语法</h2><p><br>
+{dede:channel type='top' row='8' currentstyle="&lt;li&gt;&lt;a href='~typelink~' class='thisclass'&gt;~typename~&lt;/a&gt; &lt;/li&gt;"} <br>
+ &lt;li&gt;&lt;a href='[field:typelink/]'&gt;[field:typename/]&lt;/a&gt; &lt;/li&gt; <br>
+{/dede:channel}<br>
+</p></div><div class="attrib"><h2>标签属性</h2><ul><li>
+</li><li> <iterm>typeid:栏目ID</iterm> 
+</li><li> <iterm>reid:上级栏目ID</iterm>
+</li><li> <iterm>row:调用栏目数</iterm>
+</li><li> <iterm>col:分多少列显示（默认为单列）</iterm>
+</li><li> <iterm>type:son表示下级栏目,self表示同级栏目,top顶级栏目</iterm>
+</li><li> <iterm>currentstyle:应用样式</iterm>
+</li></ul></div></div></li><li><a name="10"></a></li><li><div id="arclist" class="tag"><h1>channelartlist</h1><p class="verinfo">全局标记</p><p class="verinfo">V55,V56,V57</p><p class="description">获取当前频道的下级栏目的内容列表标签</p><div class="examples"><h2>基本语法</h2><p><br>
+{dede:channelartlist row=6}<br>
+&lt;dl&gt;<br>
+ &lt;dt&gt;&lt;a href='{dede:field name='typeurl'/}'&gt;{dede:field name='typename'/}&lt;/a&gt;&lt;/dt&gt;<br>
+ &lt;dd&gt;<br>
+ {dede:arclist titlelen='42' row='10'}    &lt;ul class='autod'&gt; <br>
+     &lt;li&gt;&lt;a href="[field:arcurl /]"&gt;[field:title /]&lt;/a&gt;&lt;/li&gt;<br>
+      &lt;li&gt;([field:pubdate function="MyDate('m-d',@me)"/])&lt;/li&gt;<br>
+    &lt;/ul&gt;<br>
+{/dede:arclist}<br>
+&lt;/dl&gt;<br>
+{/dede:channelartlist}<br>
+</p></div><div class="attrib"><h2>标签属性</h2><ul><li>
+</li><li> <iterm>typeid:频道ID</iterm> 
+</li><li> <iterm>row:获取的栏目返回值</iterm>
+</li></ul></div></div></li><li><a name="11"></a></li><li><div id="arclist" class="tag"><h1>demotag</h1><p class="verinfo">全局标记</p><p class="verinfo">V55,V56,V57</p><p class="description">这仅是一个演示标签</p><div class="examples"><h2>基本语法</h2><p><br>
+{dede:demotag /}<br>
+</p></div><div class="attrib"><h2>标签属性</h2><ul><li>
+</li></ul></div></div></li><li><a name="12"></a></li><li><div id="arclist" class="tag"><h1>feedback</h1><p class="verinfo">全局标记</p><p class="verinfo">V55,V56,V57</p><p class="description">用于调用最新评论</p><div class="examples"><h2>基本语法</h2><p><br>
+{dede:feedback}<br>
+ &lt;ul&gt;<br>
+  &lt;li class='fbtitle'&gt;[field:username function="(@me=='guest' ? '游客' : @me)"/] 对 [field:title/] 的评论：&lt;/li&gt;<br>
+  &lt;li class='fbmsg'&gt; &lt;a href="plus/feedback.php?aid=[field:aid/]" class='fbmsg'&gt;[field:msg /]&lt;/a&gt;&lt;/li&gt;<br>
+ &lt;/ul&gt;<br>
+{/dede:feedback}<br>
+</p></div><div class="attrib"><h2>标签属性</h2><ul><li>
+</li><li> <iterm>row:调用评论条数</iterm> 
+</li><li> <iterm>titlelen:标题长度</iterm>
+</li><li> <iterm>infolen:评论长度</iterm>
+</li></ul></div></div></li><li><a name="13"></a></li><li><div id="arclist" class="tag"><h1>flink</h1><p class="verinfo">全局标记</p><p class="verinfo">V55,V56,V57</p><p class="description">用于获取友情链接</p><div class="examples"><h2>基本语法</h2><p><br>
+{dede:flink row='24'/}<br>
+</p></div><div class="attrib"><h2>标签属性</h2><ul><li>
+</li><li> <iterm>type:链接类型</iterm> 
+</li><li> <iterm>row:链接数量</iterm>
+</li><li> <iterm>titlelen:站点文字的长度</iterm>
+</li><li> <iterm>linktype:链接位置内页</iterm>
+</li><li> <iterm>typeid:所有类型，可以在系统后台[模块]-[友情链接]中的“网站类型管理”中查看</iterm>
+</li></ul></div></div></li><li><a name="14"></a></li><li><div id="arclist" class="tag"><h1>flinktype</h1><p class="verinfo">全局标记</p><p class="verinfo">V55,V56,V57</p><p class="description">用于获取友情链接类型</p><div class="examples"><h2>基本语法</h2><p><br>
+{dede:flink row='24'/}<br>
+</p></div><div class="attrib"><h2>标签属性</h2><ul><li>
+</li><li> <iterm>row:链接类型数量</iterm>
+</li><li> <iterm>titlelen:链接文字的长度</iterm>
+</li></ul></div></div></li><li><a name="15"></a></li><li><div id="arclist" class="tag"><h1>group</h1><p class="verinfo">全局标记</p><p class="verinfo">V55,V56,V57</p><p class="description">圈子调用标签</p><div class="examples"><h2>基本语法</h2><p><br>
+{dede:group row='6' orderby='threads' titlelen='30'}<br>
+ &lt;li&gt;<br>
+  &lt;span&gt;&lt;img style="visibility: inherit;" title="[field:groupname/]" src="[field:icon/]" /&gt;&lt;/span&gt;<br>
+  &lt;span&gt;&lt;a href="[field:url/]" title="[field:groupname/]" target="_blank"&gt;[field:groupname/]&lt;/a&gt;&lt;/span&gt;<br>
+ &lt;/li&gt;<br>
+{/dede:group} <br>
+</p></div><div class="attrib"><h2>标签属性</h2><ul><li>
+</li><li> <iterm>row:调用条数</iterm> 
+</li><li> <iterm>orderby:排列顺序（默认是主题数）</iterm>
+</li><li> <iterm>titlelen:圈子名称最大长度</iterm>
+</li></ul></div></div></li><li><a name="16"></a></li><li><div id="arclist" class="tag"><h1>groupthread</h1><p class="verinfo">全局标记</p><p class="verinfo">V55,V56,V57</p><p class="description">圈子主题调用标签</p><div class="examples"><h2>基本语法</h2><p><br>
+{dede:groupthread gid='0' orderby='dateline' orderway='desc' row='12' titlelen='30'}<br>
+ &lt;li&gt;<br>
+  &lt;a href='[field:groupurl/]' target="_blank"&gt;[[field:groupname function="cn_substr(@me,10)"/]]&lt;/a&gt;<br>
+  &lt;a href="[field:url/]" title="[field:subject/]" target="_blank"&gt;[field:subject/]&lt;/a&gt;([field:lastpost function="GetDateMk('@me')"/])<br>
+ &lt;/li&gt;<br>
+{/dede:groupthread} <br>
+</p></div><div class="attrib"><h2>标签属性</h2><ul><li>
+</li><li> <iterm>gid:圈子id，默认为全部</iterm> 
+</li><li> <iterm>orderby:排序，默认为时间</iterm>
+</li><li> <iterm>orderway:排序方向，默认是最新主题在前</iterm>
+</li><li> <iterm>row:记录数</iterm>
+</li><li> <iterm>titlelen:主题标题(subject)最大长度</iterm>
+</li></ul></div></div></li><li><a name="17"></a></li><li><div id="arclist" class="tag"><h1>hotwords</h1><p class="verinfo">全局标记</p><p class="verinfo">V55,V56,V57</p><p class="description">获取网站搜索的热门关键字</p><div class="examples"><h2>基本语法</h2><p><br>
+{dede:hotwords /}<br>
+</p></div><div class="attrib"><h2>标签属性</h2><ul><li>
+</li><li> <iterm>num:关键词数目</iterm> 
+</li><li> <iterm>subday:天数</iterm>
+</li><li> <iterm>maxlength:关键词最大长度</iterm>
+</li></ul></div></div></li><li><a name="18"></a></li><li><div id="arclist" class="tag"><h1>infoguide</h1><p class="verinfo">全局标记</p><p class="verinfo">V55,V56,V57</p><p class="description">分类信息的地区与小分类搜索</p><div class="examples"><h2>基本语法</h2><p><br>
+{dede:infoguide /}<br>
+</p></div><div class="attrib"><h2>标签属性</h2><ul><li>
+</li></ul></div></div></li><li><a name="19"></a></li><li><div id="arclist" class="tag"><h1>infolink</h1><p class="verinfo">全局标记</p><p class="verinfo">V55,V56,V57</p><p class="description">调用分类信息地区与类型快捷链接</p><div class="examples"><h2>基本语法</h2><p><br>
+{dede:infolink /}<br>
+</p></div><div class="attrib"><h2>标签属性</h2><ul><li>
+</li></ul></div></div></li><li><a name="20"></a></li><li><div id="arclist" class="tag"><h1>json</h1><p class="verinfo">全局标记</p><p class="verinfo">V57</p><p class="description">调用某个远程连接的json数据库</p><div class="examples"><h2>基本语法</h2><p><br>
+{dede:json url='http://yoursite/json.php' cache=300}<br>
+    [field:id/]-[field:title/]&lt;br/&gt;<br>
+{/dede:json}<br>
+</p></div><div class="attrib"><h2>标签属性</h2><ul><li>
+</li><li> <iterm>url:json数据地址</iterm> 
+</li><li> <iterm>cache:缓冲时间</iterm>
+</li></ul></div></div></li><li><a name="21"></a></li><li><div id="arclist" class="tag"><h1>likearticle</h1><p class="verinfo">全局标记</p><p class="verinfo">V55,V56,V57</p><p class="description">自动关连文档标签</p><div class="examples"><h2>基本语法</h2><p><br>
+{dede:likearticle row='' col='' titlelen='' infolen=''}<br>
+&lt;a href='[field:arcurl/]'&gt;[field:title/]&lt;/a&gt;<br>
+{/dede:likearticle}<br>
+</p></div><div class="attrib"><h2>标签属性</h2><ul><li>
+</li><li> <iterm>col:分多少列显示（默认为单列）</iterm> 
+</li><li> <iterm>row:返回文档列表总数</iterm>
+</li><li> <iterm>titlelen:标题长度 等同于titlelength</iterm>
+</li><li> <iterm>infolen:表示内容简介长度 等同于infolength</iterm>
+</li><li> <iterm>mytypeid:手工指定要限定的栏目id，用,分开表示多个</iterm>
+</li><li> <iterm>innertext:单条记录样式(指标签中间的内容)</iterm>
+</li></ul></div></div></li><li><a name="22"></a></li><li><div id="arclist" class="tag"><h1>likepage</h1><p class="verinfo">全局标记</p><p class="verinfo">V55,V56,V57</p><p class="description">调用相同标识单页文档</p><div class="examples"><h2>基本语法</h2><p><br>
+{dede:likepage likeid='' row=''/}<br>
+</p></div><div class="attrib"><h2>标签属性</h2><ul><li>
+</li><li> <iterm>row:调用条数</iterm> 
+</li><li> <iterm>likeid:标识名</iterm>
+</li></ul></div></div></li><li><a name="23"></a></li><li><div id="arclist" class="tag"><h1>likesgpage</h1><p class="verinfo">全局标记</p><p class="verinfo">V55,V56,V57</p><p class="description">单页文档调用标签</p><div class="examples"><h2>基本语法</h2><p><br>
+{dede:likespage row=''/}<br>
+</p></div><div class="attrib"><h2>标签属性</h2><ul><li>
+</li><li> <iterm>row:调用条数</iterm> 
+</li></ul></div></div></li><li><a name="24"></a></li><li><div id="arclist" class="tag"><h1>loop</h1><p class="verinfo">全局标记</p><p class="verinfo">V55,V56,V57</p><p class="description">调用任意表的数据标签</p><div class="examples"><h2>基本语法</h2><p><br>
+{dede:loop table='dede_archives' sort='' row='4' if=''}<br>
+&lt;a href='[field:arcurl/]'&gt;[field:title/]&lt;/a&gt;<br>
+{/dede:loop}<br>
+</p></div><div class="attrib"><h2>标签属性</h2><ul><li>
+</li><li> <iterm>table:查询表名</iterm> 
+</li><li> <iterm>sort:用于排序的字段</iterm>
+</li><li> <iterm>row:返回结果的条数</iterm>
+</li><li> <iterm>if:查询的条件</iterm>
+</li></ul></div></div></li><li><a name="25"></a></li><li><div id="arclist" class="tag"><h1>memberinfos</h1><p class="verinfo">全局标记</p><p class="verinfo">V55,V56,V57</p><p class="description">文档关连的用户信息</p><div class="examples"><h2>基本语法</h2><p><br>
+{dede:memberinfos mid = '' /}<br>
+</p></div><div class="attrib"><h2>标签属性</h2><ul><li>
+</li><li> <iterm>mid:用户ID</iterm> 
+</li></ul></div></div></li><li><a name="26"></a></li><li><div id="arclist" class="tag"><h1>memberlist</h1><p class="verinfo">全局标记</p><p class="verinfo">V55,V56,V57</p><p class="description">会员信息调用标签</p><div class="examples"><h2>基本语法</h2><p><br>
+{dede:memberlist orderby='scores' row='20'}<br>
+&lt;a href="../member/index.php?uid={dede:field.userid /}"&gt;{dede:field.userid /}&lt;/a&gt;<br>
+&lt;span&gt;{dede:field.scores /}&lt;/span&gt;<br>
+{/dede:memberlist}<br>
+</p></div><div class="attrib"><h2>标签属性</h2><ul><li>
+</li><li> <iterm>row:调用数目</iterm> 
+</li><li> <iterm>iscommend:是否为推荐会员</iterm>
+</li><li> <iterm>orderby:按登陆时间排序 money 按金钱排序 scores 按积分排序</iterm>
+</li></ul></div></div></li><li><a name="27"></a></li><li><div id="arclist" class="tag"><h1>myad</h1><p class="verinfo">全局标记</p><p class="verinfo">V55,V56,V57</p><p class="description">获取广告代码</p><div class="examples"><h2>基本语法</h2><p><br>
+{dede:myad name=''/}<br>
+</p></div><div class="attrib"><h2>标签属性</h2><ul><li>
+</li><li> <iterm>typeid:投放范围,0为全站</iterm> 
+</li><li> <iterm>name:广告标识</iterm>
+</li></ul></div></div></li><li><a name="28"></a></li><li><div id="arclist" class="tag"><h1>mynews</h1><p class="verinfo">全局标记</p><p class="verinfo">V55,V56,V57</p><p class="description">站内新闻调用标签</p><div class="examples"><h2>基本语法</h2><p><br>
+{dede:mynews row='' titlelen=''/}<br>
+</p></div><div class="attrib"><h2>标签属性</h2><ul><li>
+</li><li> <iterm>row:调用站内新闻数</iterm> 
+</li><li> <iterm>titlelen:新闻标题长度</iterm>
+</li></ul></div></div></li><li><a name="29"></a></li><li><div id="arclist" class="tag"><h1>mytag</h1><p class="verinfo">全局标记</p><p class="verinfo">V55,V56,V57</p><p class="description">用于获取自定义宏标记的内容</p><div class="examples"><h2>基本语法</h2><p><br>
+{dede:mytag typeid='0' name=''/}<br>
+</p></div><div class="attrib"><h2>标签属性</h2><ul><li>
+</li><li> <iterm>name:标记名称，该项是必须的属性，以下 2、3是可选属性</iterm> 
+</li><li> <iterm>ismake:默认是 no 表示设定的纯HTML代码， yes 表示含板块标记的代码</iterm>
+</li><li> <iterm>typeid:表示所属栏目的ID，默认为 0 ，表示所有栏目通用的显示内容，在列表和文档模板中，typeid默认是这个列表或文档本身的栏目ＩＤ</iterm>
+</li></ul></div></div></li><li><a name="30"></a></li><li><div id="arclist" class="tag"><h1>php</h1><p class="verinfo">全局标记</p><p class="verinfo">V55,V56,V57</p><p class="description">调用PHP代码</p><div class="examples"><h2>基本语法</h2><p><br>
+{dede:php}<br>
+$a = "dede";<br>
+echo $a;<br>
+{/dede:php}<br>
+</p></div><div class="attrib"><h2>标签属性</h2><ul><li>
+</li></ul></div></div></li><li><a name="31"></a></li><li><div id="arclist" class="tag"><h1>productimagelist</h1><p class="verinfo"></p><p class="verinfo"></p><p class="description"></p><div class="examples"><h2>基本语法</h2><p></p></div><div class="attrib"><h2>标签属性</h2><ul><li></li></ul></div></div></li><li><a name="32"></a></li><li><div id="arclist" class="tag"><h1>softmsg</h1><p class="verinfo">软件内容模板</p><p class="verinfo">V55,V56,V57</p><p class="description">下载说明标签</p><div class="examples"><h2>基本语法</h2><p><br>
+{dede:softmsg /}<br>
+</p></div><div class="attrib"><h2>标签属性</h2><ul><li>
+</li></ul></div></div></li><li><a name="33"></a></li><li><div id="arclist" class="tag"><h1>sonchannel</h1><p class="verinfo">全局标记</p><p class="verinfo">V55,V56,V57</p><p class="description">子栏目调用标签</p><div class="examples"><h2>基本语法</h2><p><br>
+{dede:sonchannel}<br>
+&lt;a href='[field:typeurl/]'&gt;[field:typename/]&lt;/a&gt;<br>
+{/dede:sonchannel}<br>
+</p></div><div class="attrib"><h2>标签属性</h2><ul><li>
+</li><li> <iterm>row:返回数目</iterm> 
+</li><li> <iterm>col:默认单列显示</iterm>
+</li><li> <iterm>nosonmsg:没有指定ID子栏目显示的信息内容</iterm>
+</li></ul></div></div></li><li><a name="34"></a></li><li><div id="arclist" class="tag"><h1>sql</h1><p class="verinfo">全局标记</p><p class="verinfo">V55,V56,V57</p><p class="description">用于获取MySQL数据库内容的标签</p><div class="examples"><h2>基本语法</h2><p><br>
+{dede:sql sql='' db='default'}<br>
+[field:title/]<br>
+{/dede}<br>
+</p></div><div class="attrib"><h2>标签属性</h2><ul><li>
+</li><li> <iterm>sql:需要查询的sql语句</iterm>
+</li><li> <iterm>appname: 默认为default,即当前dedecms的数据库,如果需要自定义,可以在data/tag/sql.inc.php中扩展,具体扩展方法查看配置文件头部说明</iterm>
+</li></ul></div></div></li><li><a name="35"></a></li><li><div id="arclist" class="tag"><h1>tag</h1><p class="verinfo">全局标记</p><p class="verinfo">V55,V56,V57</p><p class="description">TAG调用标签</p><div class="examples"><h2>基本语法</h2><p><br>
+{dede:tag sort='new' getall='0'}<br>
+&lt;a href='[field:link/]'&gt;[field:tag /]&lt;/a&gt;<br>
+{/dede:tag}<br>
+</p></div><div class="attrib"><h2>标签属性</h2><ul><li>
+</li><li> <iterm>row:调用条数</iterm> 
+</li><li> <iterm>sort:排序方式 month，rand，week</iterm>
+</li><li> <iterm>getall:获取类型 0 为当前内容页TAG标记，1为获取全部TAG标记</iterm>
+</li></ul></div></div></li><li><a name="36"></a></li><li><div id="arclist" class="tag"><h1>type</h1><p class="verinfo">全局标记</p><p class="verinfo">V55,V56,V57</p><p class="description">表示指定的单个栏目的链接</p><div class="examples"><h2>基本语法</h2><p><br>
+{dede:type}<br>
+&lt;a href="[field:typelink /]"&gt;[field:typename /]&lt;/a&gt;<br>
+{/dede:type}<br>
+</p></div><div class="attrib"><h2>标签属性</h2><ul><li>
+</li><li> <iterm>typeid:指定栏目ID</iterm> 
+</li></ul></div></div></li><li><a name="37"></a></li><li><div id="arclist" class="tag"><h1>vote</h1><p class="verinfo">全局标记</p><p class="verinfo">V55,V56,V57</p><p class="description">用于获取一组投票表单</p><div class="examples"><h2>基本语法</h2><p><br>
+{dede:vote id='' lineheight='22' tablewidth='100%' titlebgcolor='#EDEDE2' titlebackground='' tablebgcolor='#FFFFFF'/}<br>
+{/dede}<br>
+</p></div><div class="attrib"><h2>标签属性</h2><ul><li>
+</li><li> <iterm>id:数字，当前投票ID</iterm>
+</li><li> <iterm>lineheight:表格高度</iterm>
+</li><li> <iterm>tablewidth:表格宽度</iterm>
+</li><li> <iterm>titlebgcolor:投票标题背景色</iterm>
+</li><li> <iterm>titlebackground:标题背景图</iterm>
+</li><li> <iterm>tablebg:投票表格背景色</iterm>
+</li></ul></div></div></li><st-div id="__selection-translator__"> <st-div class="__st-box__" style="display: none; position: fixed; z-index: 99999; left: 0px; top: 0px; transform: translateX(53px) translateY(198px);"> <st-header> <st-span class="st-icon-pin" title="固定"></st-span> <st-span class="st-icon-down-open" title="展开"></st-span> <st-span class="st-icon-cog" title="设置"></st-span> </st-header> <st-div class="__query-form__" style="display: none;"> <st-div> <textarea placeholder="输入要翻译的句子或单词"></textarea> </st-div> <st-div> <select> <option value="">自动判断</option> <option value="zh">中文</option><option value="zh-CN">中文(简体)</option><option value="zh-HK">中文(香港)</option><option value="zh-TW">中文(繁体)</option><option value="en">英语</option><option value="ja">日语</option><option value="ko">朝鲜语</option><option value="de">德语</option><option value="fr">法语</option><option value="ru">俄语</option><option value="th">泰语</option><option value="af">南非语</option><option value="ar">阿拉伯语</option><option value="az">阿塞拜疆语</option><option value="be">比利时语</option><option value="bg">保加利亚语</option><option value="ca">加泰隆语</option><option value="cs">捷克语</option><option value="cy">威尔士语</option><option value="da">丹麦语</option><option value="dv">第维埃语</option><option value="el">希腊语</option><option value="eo">世界语</option><option value="es">西班牙语</option><option value="et">爱沙尼亚语</option><option value="eu">巴士克语</option><option value="fa">法斯语</option><option value="fi">芬兰语</option><option value="fo">法罗语</option><option value="gl">加里西亚语</option><option value="gu">古吉拉特语</option><option value="he">希伯来语</option><option value="hi">印地语</option><option value="hr">克罗地亚语</option><option value="hu">匈牙利语</option><option value="hy">亚美尼亚语</option><option value="id">印度尼西亚语</option><option value="is">冰岛语</option><option value="it">意大利语</option><option value="ka">格鲁吉亚语</option><option value="kk">哈萨克语</option><option value="kn">卡纳拉语</option><option value="kok">孔卡尼语</option><option value="ky">吉尔吉斯语</option><option value="lt">立陶宛语</option><option value="lv">拉脱维亚语</option><option value="mi">毛利语</option><option value="mk">马其顿语</option><option value="mn">蒙古语</option><option value="mr">马拉地语</option><option value="ms">马来语</option><option value="mt">马耳他语</option><option value="nb">挪威语(伯克梅尔)</option><option value="nl">荷兰语</option><option value="ns">北梭托语</option><option value="pa">旁遮普语</option><option value="pl">波兰语</option><option value="pt">葡萄牙语</option><option value="qu">克丘亚语</option><option value="ro">罗马尼亚语</option><option value="sa">梵文</option><option value="se">北萨摩斯语</option><option value="sk">斯洛伐克语</option><option value="sl">斯洛文尼亚语</option><option value="sq">阿尔巴尼亚语</option><option value="sv">瑞典语</option><option value="sw">斯瓦希里语</option><option value="syr">叙利亚语</option><option value="ta">泰米尔语</option><option value="te">泰卢固语</option><option value="tl">塔加路语</option><option value="tn">茨瓦纳语</option><option value="tr">土耳其语</option><option value="ts">宗加语</option><option value="tt">鞑靼语</option><option value="uk">乌克兰语</option><option value="ur">乌都语</option><option value="uz">乌兹别克语</option><option value="vi">越南语</option><option value="xh">班图语</option><option value="zu">祖鲁语</option> </select> <st-div class="__exchange__"> <st-span class="st-icon-exchange"></st-span> </st-div> <select> <option value="">自动选择</option> <option value="zh">中文</option><option value="zh-CN">中文(简体)</option><option value="zh-HK">中文(香港)</option><option value="zh-TW">中文(繁体)</option><option value="en">英语</option><option value="ja">日语</option><option value="ko">朝鲜语</option><option value="de">德语</option><option value="fr">法语</option><option value="ru">俄语</option><option value="th">泰语</option><option value="af">南非语</option><option value="ar">阿拉伯语</option><option value="az">阿塞拜疆语</option><option value="be">比利时语</option><option value="bg">保加利亚语</option><option value="ca">加泰隆语</option><option value="cs">捷克语</option><option value="cy">威尔士语</option><option value="da">丹麦语</option><option value="dv">第维埃语</option><option value="el">希腊语</option><option value="eo">世界语</option><option value="es">西班牙语</option><option value="et">爱沙尼亚语</option><option value="eu">巴士克语</option><option value="fa">法斯语</option><option value="fi">芬兰语</option><option value="fo">法罗语</option><option value="gl">加里西亚语</option><option value="gu">古吉拉特语</option><option value="he">希伯来语</option><option value="hi">印地语</option><option value="hr">克罗地亚语</option><option value="hu">匈牙利语</option><option value="hy">亚美尼亚语</option><option value="id">印度尼西亚语</option><option value="is">冰岛语</option><option value="it">意大利语</option><option value="ka">格鲁吉亚语</option><option value="kk">哈萨克语</option><option value="kn">卡纳拉语</option><option value="kok">孔卡尼语</option><option value="ky">吉尔吉斯语</option><option value="lt">立陶宛语</option><option value="lv">拉脱维亚语</option><option value="mi">毛利语</option><option value="mk">马其顿语</option><option value="mn">蒙古语</option><option value="mr">马拉地语</option><option value="ms">马来语</option><option value="mt">马耳他语</option><option value="nb">挪威语(伯克梅尔)</option><option value="nl">荷兰语</option><option value="ns">北梭托语</option><option value="pa">旁遮普语</option><option value="pl">波兰语</option><option value="pt">葡萄牙语</option><option value="qu">克丘亚语</option><option value="ro">罗马尼亚语</option><option value="sa">梵文</option><option value="se">北萨摩斯语</option><option value="sk">斯洛伐克语</option><option value="sl">斯洛文尼亚语</option><option value="sq">阿尔巴尼亚语</option><option value="sv">瑞典语</option><option value="sw">斯瓦希里语</option><option value="syr">叙利亚语</option><option value="ta">泰米尔语</option><option value="te">泰卢固语</option><option value="tl">塔加路语</option><option value="tn">茨瓦纳语</option><option value="tr">土耳其语</option><option value="ts">宗加语</option><option value="tt">鞑靼语</option><option value="uk">乌克兰语</option><option value="ur">乌都语</option><option value="uz">乌兹别克语</option><option value="vi">越南语</option><option value="xh">班图语</option><option value="zu">祖鲁语</option> </select> </st-div> <st-div> <select> <option value="YouDao">有道翻译</option> <option value="BaiDu">百度翻译</option> <option value="Bing">必应翻译</option> <option value="Google">谷歌翻译</option> <option value="GoogleCN">谷歌翻译（国内）</option> </select> <st-div class="__action-list__"> <st-div class="__button__ __btn-translate__">翻译 <st-span class="st-icon-down-dir"></st-span> </st-div> <st-div class="__expand__"> <st-div class="__button__">朗读</st-div> <st-div class="__button__">复制</st-div> </st-div> </st-div> </st-div> </st-div> <st-div class="__translate-result__" style="display: none;">正在查询，请稍候……</st-div> <st-div class="__translate-result__"> <st-div style="display: none;"> <st-span></st-span> <st-span class="__retry__">重试</st-span> </st-div> <st-div> <st-div class="__phonetic__"> <st-span style="display: none;"></st-span> <st-span class="__copy-and-read__"> <st-span>朗读</st-span> <st-span style="display: none;">复制</st-span> </st-span> </st-div> <st-div style="display: none;"> <st-ul>  </st-ul> <st-div class="__copy-and-read__"> <st-span class="__copy-and-read__">复制</st-span> </st-div> </st-div> <st-div style="display: none;">  <st-div class="__copy-and-read__"> <st-span class="__copy-and-read__">朗读</st-span> <st-span class="__copy-and-read__">复制</st-span> </st-div> </st-div> </st-div> </st-div> <st-footer> <st-span style="display: none;">via <a target="_blank" href="http://help.dedecms.com/tagdoc/v57/main.htm"></a></st-span> </st-footer> </st-div> <st-div class="__st-btn__" style="display: none; position: fixed; z-index: 99999; left: 0px; top: 0px; transform: translateX(53px) translateY(198px);">译</st-div> </st-div></body></html>
